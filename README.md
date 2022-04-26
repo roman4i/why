@@ -3,6 +3,7 @@
 
 This app randomly generates the reasons for the Russian attack  
 The data source is a postironic picture from telegram
+
 ![source](./src/img/original.jpg)
 
 ## How it works?
@@ -14,4 +15,4 @@ How to use app:
 3. Run *$ npm start*
 4. Go to app address
 
-Or just visit [this link]()
+Or just visit [this link](https://roman4i.github.io/why/)
