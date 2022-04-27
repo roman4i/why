@@ -1,22 +1,39 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import randNum from "../../utils/randNum";
+import ContentContext from "../../utils/context";
 
 interface IContentBlockProps {
-    text: string,
     title: string,
-    arr: string[]
+    arr: string[],
+    id: number
 }
 
 const ContentBlock = (props: IContentBlockProps) => {
-    const [text, setText] = useState(props.text);
+    const {textParts, setTextParts} = useContext(ContentContext);
+
+    const { title, arr, id} = props;
+
+    const btnClick = () => {
+        const rndTxt = arr[randNum(arr.length)];
+
+        setTextParts((prev: any[]) => {
+            return prev.map((txt, index) => {
+                if (index === id) {
+                    return rndTxt;
+                }
+
+                return txt;
+            })
+        });                                        
+    }
 
     return (
         <div className="content">
             <div>
-                <div className="smallTitle">{props.title}</div>
-                <div>{text}</div>
+                <div className="smallTitle">{title}</div>
+                <div className="contentText">{textParts[id]}</div>
             </div>
-            <input type="button" className="rndBtn" value="Random" onClick={() => {setText(props.arr[randNum(props.arr.length)])}}/>
+            <input type="button" className="rndBtn" value="Random" onClick={btnClick}/>
         </div>
     );
 }
