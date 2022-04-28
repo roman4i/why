@@ -29,11 +29,11 @@ const ContentBlock = (props: IContentBlockProps) => {
 
     return (
         <div className="content">
-            <div>
+            <div className="contentText">
                 <div className="smallTitle">{title}</div>
-                <div className="contentText">{textParts[id]}</div>
+                <div>{textParts[id]}</div>
             </div>
-            <input type="button" className="rndBtn" value="Random" onClick={btnClick}/>
+            <input type="button" className="gradient-button" value="Random" onClick={btnClick}/>
         </div>
     );
 }
