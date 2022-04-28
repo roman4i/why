@@ -37,10 +37,12 @@ const Base = () => {
             <ContentContext.Provider value={{textParts, setTextParts}}>
                 <div className="mainSheet">
                     <Head />
-                    <ContentBlock arr={who} title='Хто' id={0} />
-                    <ContentBlock arr={what} title='Що зробив' id={1} />
-                    <ContentBlock arr={using} title='З допомогою' id={2} />
-                    <ContentBlock arr={why} title='Чому зробив' id={3} />
+                    <div className="contentGroup">    
+                        <ContentBlock arr={who} title='Хто' id={0} />
+                        <ContentBlock arr={what} title='Що зробив' id={1} />
+                        <ContentBlock arr={using} title='З допомогою' id={2} />
+                        <ContentBlock arr={why} title='Чому зробив' id={3} />
+                    </div>
                     <BottomText text={finText} />
                 </div>
             </ContentContext.Provider>
