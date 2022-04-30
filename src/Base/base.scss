@@ -1,0 +1,50 @@
+@import "../scss/utils.scss";
+
+.base {
+    display: block;
+    border: black 3px solid;
+    border-radius: 9px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    width: $baseWdth;
+    @include backgrounds("../../src/img/holder.jpg");
+    background-size: 100% 100%;
+  }
+  
+  .baseHead {
+    height: $baseHeadH;
+    @include backgrounds("../../src/img/pen.png");
+    background: {
+      size: contain;
+      position: center;
+    }
+  }
+  
+  .mainSheet {
+    @include backgrounds("../../src/img/paper.jpg");
+    background-size: 100% 100%;
+    margin: 0px 7px 7px;
+    height: $mainSheetH;
+    border: 1px solid gray;
+    box-shadow: 3px 3px 3px gray;
+  }
+  
+  .contentGroup {
+    height: $contentGroupH;
+  }
+
+  @media screen and (max-width: 600px) {
+    .base {
+      margin-top: 0%;
+      padding-bottom: 7px;
+      width: auto;
+      border: none;
+      border-radius: 0%;
+    }
+  
+    .mainSheet {
+      height: auto;
+    }
+  
+  }

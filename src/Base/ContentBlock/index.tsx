@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import randNum from "../../utils/randNum";
 import ContentContext from "../../utils/context";
 
+import "./contentBlock.scss"
+
 interface IContentBlockProps {
     title: string,
     arr: string[],
