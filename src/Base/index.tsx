@@ -5,6 +5,8 @@ import { who, what, using, why } from "../utils/data";
 import ContentContext from "../utils/context";
 import BottomText from "./BottomText";
 
+import "./base.scss";
+
 const Base = () => {
     const whoTitle = 'Хто це був?';
     const whatTitle = 'Що зробив?';

@@ -4,13 +4,15 @@ body {
   padding-bottom: 10px;
   border: 0;
   vertical-align: baseline;
-  background-image: url("../src/img/background1.jpg");
+  background-image: url("../../src/img/background1.jpg");
   background-size: 100vw 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media screen and (max-width: 600px) {
+  body {
+    background-image: none;
+    padding: 0;
+  }
 }
